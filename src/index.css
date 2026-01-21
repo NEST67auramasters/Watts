@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colorful, Kid-Friendly Palette */
+  --background: 210 20% 98%;
+  --foreground: 222 47% 11%;
+  
+  /* Bright Blue Primary */
+  --primary: 217 91% 60%;
+  --primary-foreground: 210 40% 98%;
+  
+  /* Soft Blue Secondary */
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  
+  /* Playful Green for Success/Money */
+  --success: 142 71% 45%;
+  --success-foreground: 0 0% 100%;
+
+  /* Alert/Fine Red */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Warm Yellow/Orange Accents */
+  --accent: 35 92% 58%;
+  --accent-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  
+  --radius: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+    @apply font-semibold tracking-wide;
+  }
+}
+
+@layer components {
+  /* Custom utility for "bouncy" interactive elements */
+  .btn-bouncy {
+    @apply transition-transform active:scale-95 hover:scale-105 duration-200 ease-in-out;
+  }
+  
+  .card-hover {
+    @apply transition-all hover:shadow-xl hover:-translate-y-1 duration-300;
+  }
+}
